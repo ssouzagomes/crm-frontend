@@ -1,7 +1,9 @@
+import * as S from './Login.styles'
+
 export const Login = () => {
   return (
-    <div>
-      <h1>Login</h1>
-    </div>
+    <S.Container>
+      <h1>Hello World</h1>
+    </S.Container>
   )
 }
