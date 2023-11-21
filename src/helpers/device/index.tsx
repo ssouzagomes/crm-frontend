@@ -1,8 +1,8 @@
 export const getToken = () => {
-  const token = localStorage.getItem('@CRM:token');
+  const token = localStorage.getItem('@CRM:token')
 
   if (token) {
-    return token;
+    return token
   }
 
   return null

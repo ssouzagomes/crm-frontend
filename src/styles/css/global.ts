@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import resetCSS from "./reset";
+import { createGlobalStyle } from 'styled-components'
+import resetCSS from './reset'
 
 const GlobalStyle = createGlobalStyle`
   ${resetCSS}
@@ -75,4 +75,4 @@ const GlobalStyle = createGlobalStyle`
   /* HEIGHT PERCENT - END */
 `
 
-export default GlobalStyle;
+export default GlobalStyle

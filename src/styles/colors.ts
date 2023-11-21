@@ -1,4 +1,4 @@
-export const randomColors = [
+const randomColors = [
   '#1976D2',
   '#0D47A1',
   '#1E88E5',
@@ -25,5 +25,6 @@ export const randomColors = [
   '#4A148C',
   '#6A1B9A',
   '#880E4F',
-];
+]
 
+export default randomColors
