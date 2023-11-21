@@ -1,5 +1,6 @@
 import { Navigate, useMatch } from 'react-router-dom'
 import { getToken } from '../../helpers/device'
+import React from 'react'
 
 interface PrivateRouterProps {
   children: React.ReactElement | null
