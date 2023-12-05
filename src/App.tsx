@@ -2,7 +2,7 @@ import { ThemeProvider } from 'styled-components'
 import Routes from './routes/root.routes'
 import GlobalStyle from './styles/css/global'
 
-function App() {
+const App = () => {
   return (
     <ThemeProvider theme={{}}>
       <GlobalStyle />

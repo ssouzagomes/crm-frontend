@@ -7,6 +7,11 @@ const GlobalStyle = createGlobalStyle`
   body {
     color: #000;
     background: #fff;
+    font-family: 'Poppins', Helvetica, sans-serif;
+  }
+
+  button {
+    cursor: pointer;
   }
 
   ::-webkit-scrollbar {

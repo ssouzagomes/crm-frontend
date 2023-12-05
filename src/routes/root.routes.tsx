@@ -1,6 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import PrivateRouter from './rules/private'
 import { AuthRoutes } from '../pages/Auth/Routes/Auth.routes'
+import PrivateRouter from './rules/private'
 
 const AppRoutes = () => {
   return (
