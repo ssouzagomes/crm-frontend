@@ -49,6 +49,10 @@ export const Card = styled.div`
 
     display: flex;
     justify-content: center;
+
+    @media ${screen.phone} {
+      width: 100%;
+    }
   }
 
   @media ${screen.phone} {

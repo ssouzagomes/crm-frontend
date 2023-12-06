@@ -1,12 +1,16 @@
+import { useState } from 'react'
 import LockOutlinedIcon from '../../../assets/icons/LockOutlinedIcon'
+import LoginOutlinedIcon from '../../../assets/icons/LoginOutlinedIcon'
 import PersonOutlinedIcon from '../../../assets/icons/PersonOutlinedIcon'
 import CallToActionButton from '../../../components/Button/CallToActionButton/CallToActionButton.component'
 import { InputForm } from '../../../components/Input/InputForm/InputForm.index'
 import * as S from './Login.styles'
 
 export const Login = () => {
+  const [loading, setLoading] = useState(false)
+
   const handleSubmit = () => {
-    console.log('Entrar')
+    setLoading(true)
   }
   return (
     <S.Container>
@@ -42,7 +46,13 @@ export const Login = () => {
         </button>
 
         <div className="submit-container">
-          <CallToActionButton label="ENTRAR" fullWidth onClick={handleSubmit} />
+          <CallToActionButton
+            fullWidth
+            label="ENTRAR"
+            loading={loading}
+            onClick={handleSubmit}
+            rightIcon={<LoginOutlinedIcon />}
+          />
         </div>
       </S.Card>
     </S.Container>
