@@ -12,7 +12,7 @@ interface ButtonStyledProps {
 
 export const Button = styled.button<ButtonStyledProps>`
   border: none;
-  border-radius: 44px;
+  border-radius: 10px;
 
   display: flex;
   align-items: center;
@@ -62,7 +62,6 @@ export const Button = styled.button<ButtonStyledProps>`
         `
       default:
         return `
-          width: 84px;
           height: 48px;
           font-size: 14px;
         `

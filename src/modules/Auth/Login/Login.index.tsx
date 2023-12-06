@@ -33,11 +33,17 @@ export const Login = () => {
           </div>
         </S.InputsContainer>
 
-        <button type="button" onClick={() => {}}>
+        <button
+          type="button"
+          onClick={() => {}}
+          className="forgot-password-button"
+        >
           Esqueceu a senha?
         </button>
 
-        <CallToActionButton label="Entrar" onClick={handleSubmit} />
+        <div className="submit-container">
+          <CallToActionButton label="ENTRAR" fullWidth onClick={handleSubmit} />
+        </div>
       </S.Card>
     </S.Container>
   )

@@ -12,4 +12,5 @@ export interface CallToActionButtonProps {
   rightIcon?: ReactNode
   marginColor?: string
   style?: CSSProperties
+  loading?: boolean
 }

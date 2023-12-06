@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div<{ fullwidth: boolean }>`
   width: ${({ fullwidth }) => (fullwidth ? '100%' : 'fit-content')};
   height: 48px;
-  background: #c5c0c0;
+  background: #dcdcdc;
 
   display: flex;
   align-items: center;
@@ -17,6 +17,6 @@ export const Container = styled.div<{ fullwidth: boolean }>`
     border: none;
     outline: none;
     font-size: 16px;
-    background: #c5c0c0;
+    background: #dcdcdc;
   }
 `
