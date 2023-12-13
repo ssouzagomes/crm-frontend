@@ -21,7 +21,7 @@ export const Login = () => {
           <div>
             <S.Label>Email:</S.Label>
             <InputForm
-              placeholder="Digite aqui"
+              placeholder="Digite seu email"
               fullwidth
               leftIcon={<PersonOutlinedIcon />}
             />
@@ -30,7 +30,7 @@ export const Login = () => {
           <div>
             <S.Label>Senha:</S.Label>
             <InputForm
-              placeholder="Digite aqui"
+              placeholder="Digite sua senha"
               fullwidth
               leftIcon={<LockOutlinedIcon />}
             />

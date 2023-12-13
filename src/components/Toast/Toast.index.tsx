@@ -4,6 +4,8 @@ import { ToastComponentProps } from './Toast.types'
 import CheckCircleOutlinedIcon from '../../assets/icons/CheckCircleOutlinedIcon'
 import CloseIcon from '../../assets/icons/CloseIcon'
 import ErrorOutlinedIcon from '../../assets/icons/ErrorOutlinedIcon'
+import InfoOutlinedIcon from '../../assets/icons/InfoOutlinedIcon'
+import WarningOutlinedIcon from '../../assets/icons/WarningOutlinedIcon'
 
 const ToastComponent = ({ title, subtitle }: ToastComponentProps) => {
   return (
@@ -99,8 +101,8 @@ export const Info = (props: ToastComponentProps) => {
       draggable: false,
       progress: undefined,
       toastId: props.title,
-      // closeButton: CloseButton,
-      // icon: <InfoOutlined sx={{ color: iconColor.info }} fontSize="small" />,
+      closeButton: CloseButton,
+      icon: <InfoOutlinedIcon width={16} height={16} color="#1665D8" />,
       ...props,
     },
   )
@@ -126,13 +128,8 @@ export const Warning = (props: ToastComponentProps) => {
       draggable: false,
       progress: undefined,
       toastId: props.title,
-      // closeButton: CloseButton,
-      // icon: (
-      //   <WarningAmberOutlined
-      //     sx={{ color: iconColor.warning }}
-      //     fontSize="small"
-      //   />
-      // ),
+      closeButton: CloseButton,
+      icon: <WarningOutlinedIcon width={16} height={16} color="#B4AD09" />,
       ...props,
     },
   )
