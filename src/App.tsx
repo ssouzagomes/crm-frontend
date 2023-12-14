@@ -5,6 +5,8 @@ import Routes from './routes/root.routes'
 import GlobalStyle from './styles/css/global'
 import { ToastContainer, toast as toastAction } from 'react-toastify'
 import * as toast from './components/Toast/Toast.index'
+import { QueryClientProvider } from 'react-query'
+import { queryClient } from './query'
 
 const App = () => {
   window.addEventListener('online', () => {
@@ -25,15 +27,17 @@ const App = () => {
   })
 
   return (
-    <ThemeProvider theme={{}}>
-      <GlobalStyle />
-      <ToastContainer
-        bodyClassName="body-toastify"
-        toastClassName="custom-toastify"
-        hideProgressBar
-      />
-      <Routes />
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={{}}>
+        <GlobalStyle />
+        <ToastContainer
+          bodyClassName="body-toastify"
+          toastClassName="custom-toastify"
+          hideProgressBar
+        />
+        <Routes />
+      </ThemeProvider>
+    </QueryClientProvider>
   )
 }
 

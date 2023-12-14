@@ -48,7 +48,13 @@
       }
     ],
     "no-unused-vars": "off",
-    "prettier/prettier": ["error", { "singleQuote": true }],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "@typescript-eslint/no-namespace": "off",
     "react-hooks/exhaustive-deps": "off",
     "react/jsx-props-no-spreading": 0,
     "no-console": "off",

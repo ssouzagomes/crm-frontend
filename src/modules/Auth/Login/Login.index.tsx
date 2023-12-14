@@ -1,16 +1,55 @@
-import { useState } from 'react'
 import LockOutlinedIcon from '../../../assets/icons/LockOutlinedIcon'
 import LoginOutlinedIcon from '../../../assets/icons/LoginOutlinedIcon'
 import PersonOutlinedIcon from '../../../assets/icons/PersonOutlinedIcon'
 import CallToActionButton from '../../../components/Button/CallToActionButton/CallToActionButton.component'
 import { InputForm } from '../../../components/Input/InputForm/InputForm.index'
 import * as S from './Login.styles'
+import { AuthMutations } from '../../../reactQuery/auth/auth.mutations'
+import { useForm } from 'react-hook-form'
+import { loginFormValidation } from '../../../validator/login'
+import { yupResolver } from '@hookform/resolvers/yup'
 
 export const Login = () => {
-  const [loading, setLoading] = useState(false)
+  const {
+    data: loginResponse,
+    mutateAsync: loginMutate,
+    isLoading: isLoadingLogin,
+  } = AuthMutations.useLogin()
 
-  const handleSubmit = () => {
-    setLoading(true)
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    getValues,
+    trigger,
+  } = useForm({
+    resolver: yupResolver(loginFormValidation),
+    shouldUnregister: false,
+    mode: 'onSubmit',
+  })
+
+  const onSubmit = () => {
+    trigger().then(async (isValid: boolean) => {
+      if (isValid) {
+        try {
+          localStorage.clear()
+          sessionStorage.clear()
+
+          const formValues = getValues()
+
+          const response = await loginMutate({
+            email: formValues.email,
+            password: formValues.password,
+          })
+
+          if (response.isValid) {
+            console.log('Success login!')
+          }
+        } catch (error) {
+          console.log(error)
+        }
+      }
+    })
   }
   return (
     <S.Container>
@@ -21,8 +60,8 @@ export const Login = () => {
           <div>
             <S.Label>Email:</S.Label>
             <InputForm
-              placeholder="Digite seu email"
               fullwidth
+              placeholder="Digite seu email"
               leftIcon={<PersonOutlinedIcon />}
             />
           </div>
@@ -30,8 +69,8 @@ export const Login = () => {
           <div>
             <S.Label>Senha:</S.Label>
             <InputForm
-              placeholder="Digite sua senha"
               fullwidth
+              placeholder="Digite sua senha"
               leftIcon={<LockOutlinedIcon />}
             />
           </div>
@@ -49,8 +88,8 @@ export const Login = () => {
           <CallToActionButton
             fullWidth
             label="ENTRAR"
-            loading={loading}
-            onClick={handleSubmit}
+            loading={isLoadingLogin}
+            onClick={onSubmit}
             rightIcon={<LoginOutlinedIcon />}
           />
         </div>
