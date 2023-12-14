@@ -1,16 +1,29 @@
+/* eslint-disable react/forbid-prop-types */
 import PropTypes from 'prop-types'
 import { FC, forwardRef } from 'react'
 import * as S from './InputForm.styles'
 import { InputFormProps } from './InputForm.types'
 
 export const InputForm: FC<InputFormProps> = forwardRef((props, ref) => {
-  const { type = 'text', placeholder, fullwidth, leftIcon, rightIcon } = props
+  const {
+    type = 'text',
+    placeholder,
+    fullwidth,
+    leftIcon,
+    rightIcon,
+    error,
+  } = props
+
+  const hookForm = { ...props.hookform, error: !!props.error }
 
   return (
-    <S.Container fullwidth={!!fullwidth}>
-      {leftIcon}
-      <input type={type || 'text'} placeholder={placeholder || 'Digite aqui'} />
-      {rightIcon}
+    <S.Container>
+      <S.InputContainer fullwidth={!!fullwidth}>
+        {leftIcon}
+        <input type={type} placeholder={placeholder} {...hookForm} />
+        {rightIcon}
+      </S.InputContainer>
+      <S.MessageError>{error}</S.MessageError>
     </S.Container>
   )
 })
@@ -21,4 +34,6 @@ InputForm.propTypes = {
   fullwidth: PropTypes.bool,
   leftIcon: PropTypes.element,
   rightIcon: PropTypes.element,
+  error: PropTypes.string,
+  hookform: PropTypes.any,
 }

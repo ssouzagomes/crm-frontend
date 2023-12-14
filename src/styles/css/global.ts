@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import resetCSS from './reset'
+import { mix, transparentize } from 'polished'
 
 const GlobalStyle = createGlobalStyle`
   ${resetCSS}
@@ -29,6 +30,58 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 16px;
     border: 4px solid transparent;
   }
+
+   /* TOASTIFY - START */
+   .Toastify__toast-container {
+    width: 370px;
+    bottom:-5px;
+
+    @media (min-width: 0px) {
+      transform: scale(0.6) translateX(-30%);
+    }
+
+    @media (min-width: 480px) {
+      transform: scale(1)
+    }
+  }
+
+  @font-face {
+    font-family: 'NotoSansDisplay';
+    src: url('../fonts/NotoSansDisplay/NotoSansDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .Toastify__toast {
+    padding: 14px;
+    box-shadow: none;
+  }
+
+  .Toastify__toast-body {
+    padding: 0 6px;
+    align-items: flex-start;
+  }
+
+  .Toastify__toast--error {
+    color: 0.6, ${mix(0.6, '#000', '#DE0C0C')};
+    background: rgb(251,234,235);
+  }
+
+  .Toastify__toast--success {
+    color: 0.6, ${mix(0.6, '#000', '#008146')};
+    background: rgb(234,242,234);
+  }
+
+  .Toastify__toast--warning {
+    color: 0.6, ${mix(0.6, '#000', '#1665D8')};
+    background: rgb(253,240,230);
+  }
+
+  .Toastify__toast--info {
+    color: 0.6, ${mix(0.6, '#000', '#B4AD09')};
+    background: rgb(230,243,250);
+  }
+  /* TOASTIFY - END */
 
   /* WIDTH PERCENT - START */
   .w-0    { width: 0%; }

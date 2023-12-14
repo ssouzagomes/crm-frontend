@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-export const Container = styled.div<{ fullwidth: boolean }>`
+export const Container = styled.div``
+
+export const InputContainer = styled.div<{ fullwidth: boolean }>`
   width: ${({ fullwidth }) => (fullwidth ? '100%' : 'fit-content')};
   height: 48px;
   background: #dcdcdc;
@@ -19,4 +21,11 @@ export const Container = styled.div<{ fullwidth: boolean }>`
     font-size: 16px;
     background: #dcdcdc;
   }
+`
+
+export const MessageError = styled.p`
+  font-family: Poppins, Helvetica, sans-serif;
+  font-size: 10px;
+  color: red;
+  margin-top: 4px;
 `

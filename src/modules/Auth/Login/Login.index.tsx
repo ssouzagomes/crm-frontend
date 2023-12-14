@@ -6,10 +6,11 @@ import { InputForm } from '../../../components/Input/InputForm/InputForm.index'
 import * as S from './Login.styles'
 import { AuthMutations } from '../../../reactQuery/auth/auth.mutations'
 import { useForm } from 'react-hook-form'
-import { loginFormValidation } from '../../../validator/login'
+import { LoginForm, loginFormValidation } from '../../../validator/login'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { FC } from 'react'
 
-export const Login = () => {
+export const Login: FC = () => {
   const {
     data: loginResponse,
     mutateAsync: loginMutate,
@@ -18,19 +19,16 @@ export const Login = () => {
 
   const {
     register,
-    handleSubmit,
     formState: { errors },
     getValues,
     trigger,
-  } = useForm({
+  } = useForm<LoginForm>({
     resolver: yupResolver(loginFormValidation),
-    shouldUnregister: false,
-    mode: 'onSubmit',
   })
-
   const onSubmit = () => {
     trigger().then(async (isValid: boolean) => {
       if (isValid) {
+        console.log(isValid)
         try {
           localStorage.clear()
           sessionStorage.clear()
@@ -51,6 +49,7 @@ export const Login = () => {
       }
     })
   }
+
   return (
     <S.Container>
       <S.Card>
@@ -63,6 +62,8 @@ export const Login = () => {
               fullwidth
               placeholder="Digite seu email"
               leftIcon={<PersonOutlinedIcon />}
+              error={errors.email?.message}
+              hookform={register('email')}
             />
           </div>
 
@@ -70,8 +71,11 @@ export const Login = () => {
             <S.Label>Senha:</S.Label>
             <InputForm
               fullwidth
+              type="password"
               placeholder="Digite sua senha"
               leftIcon={<LockOutlinedIcon />}
+              error={errors.password?.message}
+              hookform={register('password')}
             />
           </div>
         </S.InputsContainer>

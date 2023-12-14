@@ -1,11 +1,16 @@
 import * as yup from 'yup'
 
+export type LoginForm = {
+  email: string
+  password: string
+}
+
 export const loginFormValidation = yup.object().shape({
   email: yup
     .string()
-    .typeError('Campo obrigatório')
-    .required('Campo obrigatório')
-    .email('Email inválido')
+    .typeError('Campo obrigatório!')
+    .required('Campo obrigatório!')
+    .email('Email inválido!')
     .test('crmEmail', 'Domínio inválido!', (value) => {
       return value.includes('@crm.com')
     }),

@@ -37,6 +37,7 @@ export const Card = styled.div`
     align-self: flex-start;
     border: none;
     background: none;
+    padding: 0;
 
     color: #063966;
     font-family: Poppins;

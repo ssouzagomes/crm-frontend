@@ -1,3 +1,4 @@
+import { Error } from '../../components/Toast/Toast.index'
 import { errorToAvoid, formatErrorMessage } from './errorConstants'
 
 interface ErrorResponse {
@@ -18,6 +19,17 @@ export const handleErrors = async (error: ErrorResponse) => {
   const errorDetails = formatErrorMessage(errorString)
 
   if (errorDetails) {
-    console.log(errorDetails)
+    Error({
+      title: errorDetails.title,
+      subtitle: errorDetails.description,
+      autoClose: 5000,
+    })
+
+    errorDetails?.act?.()
+  } else {
+    Error({
+      title: 'Ocorreu um erro, tente novamente.',
+      autoClose: 5000,
+    })
   }
 }
