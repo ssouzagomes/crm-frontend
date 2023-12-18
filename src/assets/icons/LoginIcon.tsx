@@ -1,6 +1,6 @@
 import { SVGProps } from 'react'
 
-const LoginOutlinedIcon = (props: SVGProps<SVGSVGElement>) => {
+const LoginIcon = (props: SVGProps<SVGSVGElement>) => {
   const { width, height, color } = props
 
   return (
@@ -20,4 +20,4 @@ const LoginOutlinedIcon = (props: SVGProps<SVGSVGElement>) => {
   )
 }
 
-export default LoginOutlinedIcon
+export default LoginIcon

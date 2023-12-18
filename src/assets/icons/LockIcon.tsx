@@ -1,6 +1,6 @@
 import { SVGProps } from 'react'
 
-const LockOutlinedIcon = (props: SVGProps<SVGSVGElement>) => {
+const LockIcon = (props: SVGProps<SVGSVGElement>) => {
   const { width, height, color } = props
 
   return (
@@ -31,4 +31,4 @@ const LockOutlinedIcon = (props: SVGProps<SVGSVGElement>) => {
   )
 }
 
-export default LockOutlinedIcon
+export default LockIcon

@@ -1,6 +1,6 @@
 import { SVGProps } from 'react'
 
-const CheckCircleOutlinedIcon = (props: SVGProps<SVGSVGElement>) => {
+const CheckCircleIcon = (props: SVGProps<SVGSVGElement>) => {
   const { width, height, color } = props
 
   return (
@@ -19,4 +19,4 @@ const CheckCircleOutlinedIcon = (props: SVGProps<SVGSVGElement>) => {
   )
 }
 
-export default CheckCircleOutlinedIcon
+export default CheckCircleIcon

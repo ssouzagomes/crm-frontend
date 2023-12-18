@@ -1,36 +1,12 @@
 import styled from 'styled-components'
-import { colors } from '../../../styles/colors'
 import { screen } from '../../../styles/css/metrics'
 
-export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 100vh;
-  width: 100%;
-  color: #000;
-
-  background: ${colors.gradient};
-  background-blend-mode: multiply;
-`
-
-export const Card = styled.div`
+export const CredentialsContainer = styled.form`
   display: flex;
   align-items: center;
   flex-direction: column;
 
-  padding: 32px;
-  background: ${colors.white};
-  border-radius: 8px;
-  width: 476px;
-
-  filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
-
-  .title {
-    color: ${colors.blue500};
-    font-size: 40px;
-  }
+  width: 100%;
 
   .forgot-password-button {
     display: flex;
@@ -46,7 +22,7 @@ export const Card = styled.div`
 
   .submit-container {
     width: 200px;
-    margin-top: 16px;
+    margin-top: 32px;
 
     display: flex;
     justify-content: center;
@@ -54,15 +30,6 @@ export const Card = styled.div`
     @media ${screen.phone} {
       width: 100%;
     }
-  }
-
-  @media ${screen.phone} {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0;
   }
 `
 
@@ -80,4 +47,12 @@ export const Label = styled.p`
   font-family: Poppins;
   font-size: 16px;
   margin-bottom: 8px;
+`
+
+export const ConfirmTokenContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
 `

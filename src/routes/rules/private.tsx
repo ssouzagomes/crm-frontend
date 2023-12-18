@@ -10,7 +10,7 @@ const PrivateRouter = ({ children }: PrivateRouterProps) => {
   const token = getToken()
   const isAuth = useMatch('auth/*')
 
-  if (!token) return isAuth ? children : <Navigate to="/auth" replace />
+  if (!token) return isAuth ? children : <Navigate to="/login" replace />
 
   return children
 }

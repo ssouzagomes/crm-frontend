@@ -1,9 +1,9 @@
-import { CallToActionButtonProps } from './CallToActionButton.types'
-import * as S from './CallToActionButton.styles'
+import { ActionButtonProps } from './ActionButton.types'
+import * as S from './ActionButton.styles'
 import { If, Then, Else } from 'react-if'
 import { SpinnerLoading } from '../../SpinnerLoading/SpinnerLoading.index'
 
-const CallToActionButton = (props: CallToActionButtonProps) => {
+const ActionButton = (props: ActionButtonProps) => {
   const {
     label,
     onClick,
@@ -17,12 +17,14 @@ const CallToActionButton = (props: CallToActionButtonProps) => {
     marginColor,
     style,
     loading,
+    type = 'button',
   } = props
 
   const noLabel = !label || label?.length <= 0
 
   return (
     <S.Button
+      type={type}
       onClick={disabled ? () => {} : onClick}
       disabled={disabled}
       fullwidth={fullWidth}
@@ -46,4 +48,4 @@ const CallToActionButton = (props: CallToActionButtonProps) => {
   )
 }
 
-export default CallToActionButton
+export default ActionButton

@@ -11,7 +11,7 @@ export const InputContainer = styled.div<{ fullwidth: boolean }>`
   align-items: center;
   border-radius: 4px;
   padding: 8px 16px;
-  gap: 10px;
+  gap: 8px;
 
   input {
     width: 100%;

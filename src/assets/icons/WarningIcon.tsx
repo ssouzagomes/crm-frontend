@@ -1,6 +1,6 @@
 import { SVGProps } from 'react'
 
-const WarningOutlinedIcon = (props: SVGProps<SVGSVGElement>) => {
+const WarningIcon = (props: SVGProps<SVGSVGElement>) => {
   const { width, height, color } = props
 
   return (
@@ -19,4 +19,4 @@ const WarningOutlinedIcon = (props: SVGProps<SVGSVGElement>) => {
   )
 }
 
-export default WarningOutlinedIcon
+export default WarningIcon

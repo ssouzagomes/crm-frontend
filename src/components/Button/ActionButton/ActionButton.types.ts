@@ -1,8 +1,8 @@
 import { CSSProperties, ReactNode } from 'react'
 
-export interface CallToActionButtonProps {
+export interface ActionButtonProps {
   label?: string
-  onClick: () => void
+  onClick?: () => void
   disabled?: boolean
   fullWidth?: boolean
   backgroundColor?: string
@@ -13,4 +13,5 @@ export interface CallToActionButtonProps {
   marginColor?: string
   style?: CSSProperties
   loading?: boolean
+  type?: 'button' | 'submit'
 }
