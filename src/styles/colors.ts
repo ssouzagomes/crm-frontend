@@ -5,14 +5,19 @@ export const colors = {
   white: '#FFF',
   black400: '#041524',
 
+  gray50: '#fafafa',
+  gray300: '#e0e0e0',
   gray500: '#C5C0C0',
   gray600: '#494949',
   gray700: '#595959',
 
   blue100: '#CFDEF3',
+  blue300: '#1665D8',
   blue500: '#014077',
   blue600: '#063966',
   blue700: '#05233E',
+
+  red500: '#C53030',
 }
 
 export const randomColors = [

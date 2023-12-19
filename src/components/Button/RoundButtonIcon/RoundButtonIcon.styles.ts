@@ -9,16 +9,18 @@ export const Container = styled.div<StyleProps>`
   justify-content: center;
   border-radius: 44px;
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    background: ${colors.gray500};
-  }
 
   .center-icon {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 44px;
+
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: ${colors.gray300};
+    }
   }
 
   &.icon16 {

@@ -7,11 +7,7 @@ export const AuthLayout: FC<AuthLayoutProps> = (props: AuthLayoutProps) => {
 
   return (
     <S.Container>
-      <S.Card>
-        <h1 className="title">CRM</h1>
-
-        {children}
-      </S.Card>
+      <S.Card>{children}</S.Card>
     </S.Container>
   )
 }

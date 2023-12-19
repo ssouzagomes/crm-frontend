@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // import FingerprintJS from '@fingerprintjs/fingerprintjs';
-// import UAParser from 'ua-parser-js';
+import UAParser from 'ua-parser-js'
 
 // // DEVICE INFOS
 // export const fingerprint = () => {
@@ -19,10 +19,10 @@ export const getLanguage = () => {
   return navigator.language
 }
 
-// export const browserInfo = () => {
-//   const parser = new UAParser();
-//   return parser.getResult();
-// };
+export const browserInfo = () => {
+  const parser = new UAParser()
+  return parser.getResult()
+}
 
 // TOKENS ACTIONS
 export const getToken = () => {
