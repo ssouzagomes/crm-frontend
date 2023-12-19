@@ -40,7 +40,7 @@ export const Card = styled.div`
     padding: 0;
 
     color: #063966;
-    font-family: Poppins;
+    font-family: 'Roboto';
     font-size: 12px;
   }
 

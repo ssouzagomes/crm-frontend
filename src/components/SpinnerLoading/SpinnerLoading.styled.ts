@@ -8,9 +8,9 @@ export const Spinner = styled.div<SpinnerLoadingProps>`
   border-right: 2px solid transparent;
   border-top: 2px solid
     ${({ spinnerColor }) => (spinnerColor === 'primary' ? '#014077' : '#FFF')};
-  height: 16px;
+  height: ${({ size }) => `${size || 16}px`};
+  width: ${({ size }) => `${size || 16}px`};
   margin: 0;
-  width: 16px;
 
   @keyframes spin {
     from {

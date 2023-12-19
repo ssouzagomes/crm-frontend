@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import resetCSS from './reset'
-import { mix, transparentize } from 'polished'
+import { mix } from 'polished'
 
 const GlobalStyle = createGlobalStyle`
   ${resetCSS}
@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     color: #000;
     background: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, Helvetica, sans-serif;
   }
 
   button {

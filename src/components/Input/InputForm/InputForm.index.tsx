@@ -14,11 +14,11 @@ export const InputForm: FC<InputFormProps> = forwardRef((props, ref) => {
     error,
   } = props
 
-  const hookForm = { ...props.hookform, error: !!props.error }
+  const hookForm = { ...props.hookform }
 
   return (
     <S.Container>
-      <S.InputContainer fullwidth={!!fullwidth}>
+      <S.InputContainer fullwidth={String(fullwidth)}>
         {leftIcon}
         <input type={type} placeholder={placeholder} {...hookForm} />
         {rightIcon}

@@ -17,6 +17,10 @@ export const formatErrorMessage = (type: string) => {
       title: 'Não é um email de domínio CRM válido',
       description: '',
     },
+    email_NOT_CRM_MAIL_VALID: {
+      title: 'Não é um email de domínio CRM válido',
+      description: '',
+    },
     INVALID_TOKEN: {
       title: 'Código inválido',
       description: '',

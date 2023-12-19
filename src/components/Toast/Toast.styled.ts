@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   .toast-title,
   .toast-subtitle {
-    font-family: Poppins, Helvetica, sans-serif;
+    font-family: 'Roboto', Helvetica, sans-serif;
   }
 
   .toast-title {
