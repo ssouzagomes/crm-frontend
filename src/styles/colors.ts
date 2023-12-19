@@ -1,3 +1,25 @@
+export const colors = {
+  gradient:
+    'linear-gradient(118deg, rgba(5, 37, 69, 0.71) 0%, rgba(81, 167, 252, 0.80) 97.92%, #51A7FC 97.92%)',
+
+  white: '#FFF',
+  black400: '#041524',
+
+  gray50: '#fafafa',
+  gray300: '#e0e0e0',
+  gray500: '#C5C0C0',
+  gray600: '#494949',
+  gray700: '#595959',
+
+  blue100: '#CFDEF3',
+  blue300: '#1665D8',
+  blue500: '#014077',
+  blue600: '#063966',
+  blue700: '#05233E',
+
+  red500: '#C53030',
+}
+
 export const randomColors = [
   '#1976D2',
   '#0D47A1',
@@ -25,5 +47,4 @@ export const randomColors = [
   '#4A148C',
   '#6A1B9A',
   '#880E4F',
-];
-
+]
