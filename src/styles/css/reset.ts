@@ -156,6 +156,6 @@ const resetCSS = () => `
   html, body {
     overflow-x: hidden;
   }
-`;
+`
 
-export default resetCSS;
+export default resetCSS
